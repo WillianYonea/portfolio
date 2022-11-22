@@ -1,0 +1,693 @@
+
+* {
+    /* text-decoration: none; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    color: #FFF;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    /* 
+    - Para utilizar o scroll behavior no chrome, é necessário ativar a função
+    através da url "chrome://flags/#smooth-scrolling"  
+    - No Safari, está função não funciona
+     */
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.centralizador {
+    /* padding: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.showUp {
+    visibility: hidden;
+}
+
+h1, h2 {
+    color: #FFB800;
+    /* text-align: center; */
+}
+
+/************** / Barra de Navegação / **************/
+
+#barra-navegacao {
+    width: 100%;
+    background-color: rgba(46, 47, 52, 97%);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-item {
+    margin: 5px 10px;
+    padding: 15px 0px 3px 0px;
+}
+
+a { 
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    color: #b3b3b3;
+}
+
+.navbar-menu a:after {
+    content: "";
+    position: absolute;
+    background-color: #FFB800;
+    height: 0.5px;
+    width: 0;
+    left: 0;
+    bottom: -1px;
+    transition: 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #FFF;
+}
+
+.navbar-menu a:hover:after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 6px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/************** / Seção Início / **************/
+
+#inicio {
+    background-color: #2E2F34;
+    padding-top: 150px;
+}
+
+
+.conteudo-inicio {
+    width: 400px;
+}
+
+#inicio h1 {
+    text-align: end;
+    padding-right: 13px;
+    font-size: 2rem;
+}
+
+#inicio a {
+    color: #FFB800;
+    cursor: pointer;
+}
+
+.intro {
+    display: block;
+    text-align: end;
+    padding: 10px 13px 10px 0;
+    font-size: 2.8rem;
+}
+
+#inicio a {
+    width: 100px;
+    float: right;
+}
+
+#inicio .linkedin-icon {
+    padding-right: 15px;
+    width: 100px;
+    height: 30px;
+    filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(341deg) brightness(108%) contrast(100%);
+
+}
+
+#inicio .linkedin-icon:hover {
+    filter: invert(70%) sepia(87%) saturate(2005%) hue-rotate(1deg) brightness(105%) contrast(103%);
+}
+
+.imagem-inicio {
+    margin: 0 auto;
+}
+
+.gif {
+    width: 100%;
+    max-width: 300px;
+}
+
+/************** / Sobre / **************/
+
+#sobre {
+    background-color: #34353A;
+}
+
+.imagem-sobre {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.imagem {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+}
+
+#sobre h1 {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.conteudo-sobre {
+    margin: 0 0 0 15px;
+    width: 600px;
+}
+
+/************** / Projetos / **************/
+
+#projetos {
+    /* max-height: 95vh; */
+    height: 100%;
+    background-color: #2E2F34;
+}
+
+#projetos .container {
+    padding: 50px 0px;
+}
+
+.titulo-projetos {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.projetos-container {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.projetos-items {
+    width: 200px;
+    height: 200px;
+    background-color: #48484A;
+    border-radius: 20px;
+    text-align: center;
+    padding: 90px 0;
+    transition: 2s;
+}
+
+.projetos-items p {
+    position: absolute;
+    top: 0;
+    padding: 50px 15px;
+}
+
+
+.hidden-information, .hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+
+.botoes-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 160px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #48484A;
+    color: #FFF;
+    text-align: center;
+    margin: 60px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button:hover {
+    color: #FFB800;
+}
+
+.fa-github {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+/************** / Habilidades / **************/
+
+#habilidades {
+    height: 100%;
+    /* max-height: 95vh; */
+    background-color: #34353A;
+}
+
+.titulo-habilidades {
+    padding: 70px 0 50px 30px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 15px;
+}
+
+.habilidades-logos {
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.habilidades-logo {
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    max-height: 140px;
+    margin: 0 10px;
+    filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(341deg) brightness(108%) contrast(100%);
+}
+
+.habilidades-logo:hover {
+    filter: invert(70%) sepia(87%) saturate(2005%) hue-rotate(1deg) brightness(105%) contrast(103%);
+}
+
+.habilidades-texto {
+    width: 40%;
+    max-width: 490px;
+    max-height: 290px;
+    background-color: #535458;
+    color: #FFF;
+}
+
+.habilidades-descricao {
+    display: none;
+}
+
+.habilidades-descricao span{
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.habilidades-descricao p{
+    padding: 10px;
+}
+
+#texto-padrao {
+    text-align: center;
+    padding: 90px 0;
+}
+
+.show {
+    display: block;
+}
+
+/************** / Contato / **************/
+
+#contato {
+    background-color: #2E2F34;
+    color: #FFF;
+    height: 100%;
+    max-height: 70vh;
+}
+
+.titulo-contato {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.contato-container {
+    width: 100%;
+    padding-bottom: 30px;
+    padding: 80px 0;
+}
+
+.email-container, 
+.whatsapp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.email-container, 
+.whatsapp-container, 
+.linkedin-container {
+    text-align: center;
+}
+
+.email-icon, .whatsapp-icon {
+    width: 30px;
+    margin-right: 10px;
+    filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(341deg) brightness(108%) contrast(100%);
+
+}
+
+#contato .linkedin-icon {
+    cursor: pointer;
+    padding: 0;
+    width: 150px;
+    height: 50px;
+    filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(341deg) brightness(108%) contrast(100%);
+
+}
+
+#contato .linkedin-icon:hover {
+    filter: invert(70%) sepia(87%) saturate(2005%) hue-rotate(1deg) brightness(105%) contrast(103%);
+}
+
+.button-up-container {
+    height: 20px;
+}
+
+.fa-angles-up {
+    padding: 15px;
+    cursor: pointer;
+    float: right;
+    color: #FFB800;
+}
+
+/************** / Rodapé / **************/
+
+footer {
+    background-color: #252527;
+    color: #FFF;
+}
+
+footer .centralizador {
+    padding: 10px;
+    height: 100%;
+    max-height: 80px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  
+    /* Seção Início */
+  
+    .gif {
+      width: 100%;
+    }
+  
+    /* Seção Projetos */
+  
+    .button {
+      margin: 60px 5px;
+      font-size: 16px;
+    }
+  
+    /* Seção Habilidades */
+
+    /* Rodapé */
+
+    footer .logo {
+        display: none;
+    }
+
+    footer .centralizador {
+        padding: 20px;
+    }
+
+    footer span {
+        margin: 0 auto;
+    }
+  
+  }
+  
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) { 
+      .hamburger-menu {
+          display: block;
+      }
+      .hamburger-menu.active .bar:nth-child(2){
+          opacity: 0;
+        }
+       .hamburger-menu.active .bar:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+        }
+       .hamburger-menu.active .bar:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+        }
+  
+        .container {
+          width: 100%;
+        }
+      
+        .navbar-menu {
+          height: 100vh;
+          width: 240px;
+          position: fixed;
+          right: -100%;
+          top: 0;
+          flex-direction: column;
+          transition: 0.3s;
+          background-color: black;
+          border-radius: 0 0 0 15px;
+          opacity: 90%;
+          padding: 70px 20px 0 0;
+        }
+  
+        .navbar-item {
+          text-align: end;
+        }
+  
+        .navbar-menu.active{
+          right: 0;
+        }
+  
+        /* Seção Início */
+  
+        #inicio {
+          padding: 140px 0 100px 0;
+        }
+        #inicio h1, .intro {
+          text-align: center;
+          padding: 0;
+        }
+  
+        #inicio a {
+          float: none;
+        }
+  
+        .conteudo-inicio {
+          text-align: center;
+          margin: 0 auto;
+        }
+  
+        /* Seção Sobre */
+  
+        #sobre .centralizador {
+          padding: 0;
+        }
+  
+        #sobre h1 {
+          text-align: center;
+          padding: 20px;
+        }
+  
+        .conteudo-sobre {
+          margin: 0 auto;
+        }
+  
+        .conteudo-sobre p {
+          padding: 10px;
+        }
+  
+        /* Seção Projetos */
+  
+        .titulo-projetos {
+          padding: 15px 10;
+        }
+  
+        .titulo-habilidades {
+          padding: 30px;
+          text-align: center;
+        }
+  
+        .habilidades-container {
+          display: block;
+          padding: 0 0 25px 0;
+        }
+  
+        .habilidades-logos {
+          width: 90%;
+          max-width: 440px;
+          margin: 0 auto;
+          padding-bottom: 30px;
+        }
+  
+        .habilidades-logo {
+          width: 70px;
+        }
+  
+        .habilidades-texto {
+          width: 90%;
+          max-width: 440px;
+          min-height: 250px;
+          margin: 0 auto;
+        }
+        
+  
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (min-width: 768px){ 
+    .container {
+        width: 90%;
+    }
+
+    .centralizador {
+        flex-wrap: nowrap;
+    }
+
+    #inicio {
+        padding: 10rem 0;
+    }
+
+    #sobre .centralizador {
+        padding: 60px 0;
+    }
+
+    .habilidades-container {
+        padding: 0 0 100px 0;
+    }
+
+    .habilidades-logo {
+        width: 70px;
+        margin: 0 2px;
+    }
+
+    .habilidades-logos {
+        width: 50%;
+        max-width: 360px;
+    }
+
+    .habilidades-texto {
+        width: 50%;
+        min-height: 250px;
+    }
+
+    .contato-container {
+        padding: 50px 0;
+    }
+
+
+
+  }
+  
+  /* Large devices (desktops, less than 1200px) */
+  @media (min-width: 998px) { 
+    .container {
+        width: 80%;
+    }
+
+    .imagem-inicio {
+        margin: 0 40px;
+    }
+
+    .gif {
+        max-width: 400px;
+    }
+
+
+    #sobre .centralizador {
+        padding: 12rem 0;
+    }
+
+    .habilidades-logo {
+        width: 90px;
+        margin: 0 10px;
+    }
+
+    .habilidades-logos {
+        width: 50%;
+        max-width: 600px;
+    }
+
+    .habilidades-texto {
+        width: 50%;
+        min-height: 250px;
+    }
+      
+  }
+  
+  /* X-Large devices (large desktops, less than 1400px) */
+  @media (min-width: 1399.98px) {
+
+    #inicio {
+        padding: 16rem 0;
+    }
+
+    .habilidades-logo {
+        width: 120px;
+        margin: 0 10px;
+    }
+  
+  }
